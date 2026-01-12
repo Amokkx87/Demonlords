@@ -1,0 +1,67 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:body>
+    <!-- <h:panelGroup>
+        <h3 style="color:#f5d98f;">Menü</h3>
+        <a href="/home.xhtml" class="menu-item"><i class="fa-solid fa-home"></i> Startseite</a>
+        <a href="/pages/inbox.xhtml" class="menu-item"><i class="fa-solid fa-envelope"></i> Nachrichten</a>
+        <a href="/profile.xhtml" class="menu-item"><i class="fa-solid fa-user"></i> Profil</a>
+        <a href="/settings.xhtml" class="menu-item"><i class="fa-solid fa-gear"></i> Einstellungen</a>
+        <hr/>
+        <a href="/logout.xhtml" class="menu-item"><i class="fa-solid fa-door-open"></i> Logout</a>
+    </h:panelGroup>-->
+    <div class="sidebar">
+
+    <div class="sidebar-title">MENÜ</div>
+
+    <a href="/home.xhtml" class="menu-link">
+        <i class="fa-solid fa-home"></i> Startseite
+    </a>
+
+    <a href="/pages/inbox.xhtml" class="menu-link">
+        <i class="fa-solid fa-envelope"></i> Nachrichten
+    </a>
+
+    <a href="/profile.xhtml" class="menu-link">
+        <i class="fa-solid fa-user"></i> Profil
+    </a>
+
+    <!-- ==========================
+         SUBMENU: GEBÄUDE
+    =========================== -->
+    <div class="submenu-header" onclick="toggleSub(this)">
+        <i class="fa-solid fa-building"></i> Gebäude
+        <i class="fa-solid fa-chevron-right arrow"></i>
+    </div>
+
+    <div class="submenu">
+        <a href="/pages/kaserne.xhtml" class="menu-link sub">Kaserne</a>
+        <a href="/pages/friedhof.xhtml" class="menu-link sub">Friedhof</a>
+        <a href="/pages/schattenportal.xhtml" class="menu-link sub">Schattenportal</a>
+        <a href="/pages/drachenhof.xhtml" class="menu-link sub">Drachenhof</a>
+        <a href="/pages/verteidigung.xhtml" class="menu-link sub">Verteidigung</a>
+    </div>
+
+    <a href="/settings.xhtml" class="menu-link">
+        <i class="fa-solid fa-gear"></i> Einstellungen
+    </a>
+
+    <hr class="divider"/>
+
+    <a href="/logout.xhtml" class="menu-link">
+        <i class="fa-solid fa-door-open"></i> Logout
+    </a>
+
+</div>
+
+<script>
+    function toggleSub(el) {
+        el.classList.toggle("open");
+        const sub = el.nextElementSibling;
+        sub.style.maxHeight = sub.style.maxHeight ? null : sub.scrollHeight + "px";
+    }
+</script>
+</h:body>
+</html>

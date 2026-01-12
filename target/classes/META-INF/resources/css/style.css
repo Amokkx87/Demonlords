@@ -1,0 +1,459 @@
+.inbox-msg-expand {
+	animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {from { opacity:0;
+	transform: translateY(-5px);
+}
+
+to {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+}
+
+/* ================================
+   📬 Demonlords Inbox Layout Styling
+   ================================ */
+
+/* --- Header/Sidebar Layout --- */
+.dl-header {
+	background: linear-gradient(to right, #3a1c1c, #222);
+	padding: 1rem;
+	color: #f5d98f;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.dl-sidebar {
+	background-color: #1c1c1c;
+	min-height: 100vh;
+	padding: 1rem;
+	border-right: 1px solid #333;
+}
+
+.dl-content {
+	padding: 1rem;
+}
+
+.menu-item {
+	display: block;
+	color: #ccc;
+	text-decoration: none;
+	padding: 0.5rem 0;
+	transition: 0.3s;
+}
+
+.menu-item:hover {
+	color: #f5d98f;
+	padding-left: 5px;
+}
+
+/* ===========================
+   📌 Inbox Headline
+   =========================== */
+h2 {
+	color: #f5d98f;
+	margin-bottom: 1rem;
+	font-weight: 300;
+}
+
+/* ===========================
+   📁 Ordner Select Dropdown
+   =========================== */
+.ui-selectonemenu {
+	background: #222 !important;
+	border: 1px solid #444 !important;
+	border-radius: 4px;
+	color: #ddd !important;
+}
+
+.ui-selectonemenu-label {
+	color: #ddd !important;
+}
+
+.ui-selectonemenu-items-wrapper {
+	background: #222 !important;
+}
+
+.ui-selectonemenu-item {
+	color: #ddd !important;
+}
+
+.ui-selectonemenu-item:hover {
+	background-color: #333 !important;
+}
+
+/* ===========================
+   🧰 Toolbar Styling
+   =========================== */
+.inbox-toolbar {
+	background: #181818 !important;
+	border: 1px solid #333 !important;
+	padding: 0.5rem !important;
+}
+
+.ui-button {
+	background: #333 !important;
+	border: 1px solid #555 !important;
+	color: #ddd !important;
+}
+
+.ui-button:hover {
+	background: #444 !important;
+	border-color: #777 !important;
+}
+
+/* ===========================
+   📜 DataTable Styling
+   =========================== */
+.ui-datatable {
+	border: 1px solid #333 !important;
+	background: #161616 !important;
+}
+
+.ui-datatable-header, .ui-datatable-footer {
+	background: #1f1f1f !important;
+	border-color: #333 !important;
+}
+
+.ui-datatable thead th {
+	background: #222 !important;
+	color: #eee !important;
+	border-color: #333 !important;
+	font-weight: 400 !important;
+}
+
+.ui-datatable tbody tr {
+	background: #151515 !important;
+	border-color: #222 !important;
+}
+
+.ui-datatable tbody tr:nth-child(even) {
+	background: #191919 !important;
+}
+
+.ui-datatable tbody tr:hover {
+	background: #2a2a2a !important;
+}
+
+.ui-datatable .ui-state-highlight {
+	background: #402020 !important;
+	border-color: #804040 !important;
+}
+
+/* Selection Checkbox */
+.ui-selection-column .ui-chkbox-box {
+	background: #222;
+	border: 1px solid #555;
+}
+
+.ui-selection-column .ui-chkbox-box.ui-state-active {
+	background: #703030 !important;
+	border-color: #d08080 !important;
+}
+
+/* ===========================
+   🔽 Row Expansion Panel
+   =========================== */
+.inbox-msg-expand {
+	background: #1c1c1c !important;
+	padding: 1rem;
+}
+
+.ui-panel {
+	background: #1a1a1a !important;
+	border: 1px solid #333 !important;
+}
+
+.ui-panel .ui-panel-content {
+	padding: 0.5rem !important;
+	color: #ddd !important;
+}
+
+/* Buttons in expandable row */
+.ui-panel .ui-button {
+	margin-right: 0.5rem;
+}
+
+/* ===========================
+   ✉️ Expanded message content
+   =========================== */
+.inbox-msg-expand .ui-panel .ui-panel-content h\\:outputText {
+	color: #ddd !important;
+}
+
+/* ===========================
+   📱 Responsive Fixes
+   =========================== */
+@media ( max-width : 768px) {
+	.dl-sidebar {
+		display: none;
+		position: absolute;
+		width: 70%;
+		z-index: 999;
+	}
+	.dl-sidebar.active {
+		display: block;
+	}
+	.inbox-toolbar {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+}
+
+/* ===========================
+   SIDEBAR CONTAINER
+   =========================== */
+.sidebar {
+	width: 260px;
+	height: 100vh;
+	background: linear-gradient(180deg, #221c17, #0d0b08);
+	padding: 20px;
+	border-right: 2px solid #4d3b22;
+	box-shadow: 4px 0 12px rgba(0, 0, 0, 0.5);
+	position: fixed;
+	left: 0;
+	top: 0;
+	color: #f5d98f;
+	overflow-y: auto;
+}
+
+/* ===========================
+   TITEL
+   =========================== */
+.sidebar-title {
+	font-size: 22px;
+	font-weight: bold;
+	color: #f5d98f;
+	margin-bottom: 20px;
+	letter-spacing: 2px;
+	text-shadow: 0 0 8px rgba(255, 215, 120, 0.5);
+}
+
+/* ===========================
+   MENU LINKS
+   =========================== */
+.menu-link {
+	display: block;
+	padding: 10px 5px;
+	font-size: 16px;
+	color: #d7c3a3;
+	text-decoration: none;
+	border-left: 3px solid transparent;
+	transition: 0.3s;
+}
+
+.menu-link:hover {
+	color: #ffe7b3;
+	background: rgba(255, 255, 255, 0.05);
+	border-left: 3px solid #f5d98f;
+}
+
+/* Submenu items */
+.menu-link.sub {
+	padding-left: 25px;
+	font-size: 15px;
+}
+
+/* ===========================
+   SUBMENU HEADER
+   =========================== */
+.submenu-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #f5d98f;
+	font-size: 17px;
+	padding: 10px 5px;
+	cursor: pointer;
+	margin-top: 5px;
+	border-left: 3px solid transparent;
+	transition: 0.3s;
+}
+
+.submenu-header:hover {
+	background: rgba(255, 255, 255, 0.05);
+	border-left: 3px solid #f5d98f;
+}
+
+.submenu-header .arrow {
+	transition: transform 0.25s ease;
+}
+
+.submenu-header.open .arrow {
+	transform: rotate(90deg);
+}
+
+/* ===========================
+   SUBMENU BOX
+   =========================== */
+.submenu {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.35s ease;
+	border-left: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ===========================
+   DIVIDER
+   =========================== */
+.divider {
+	border-color: rgba(255, 255, 255, 0.15);
+	margin: 20px 0;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media ( max-width : 900px) {
+	.sidebar {
+		width: 200px;
+	}
+}
+
+.unit-card {
+	perspective: 1000px;
+	margin: 8px;
+	cursor: pointer;
+	width: 180px;
+    height: 280px;
+}
+
+.unit-card-inner {
+	width: 100%;
+    height: 100%;
+
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+    position: relative;
+}
+
+.unit-card.flipped .unit-card-inner {
+	transform: rotateY(180deg);
+}
+
+.unit-face {
+	position: absolute;
+	width: 100%;
+    height: 100%;
+	backface-visibility: hidden;
+	padding: 10px;
+	text-align: center;
+	background: #1a1a1a;
+	border: 1px solid #333;
+	border-radius: 8px;
+	box-sizing: border-box;
+}
+
+/* VORDERSEITE */
+.unit-front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.unit-face.unit-back {
+	transform: rotateY(180deg);
+}
+
+/* Name oben */
+.unit-name {
+	color: #f5d98f;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 8px;
+	/* automatische Schriftgrößenanpassung */
+    font-size: clamp(10px, 5vw, 16px);
+    line-height: 16px;
+
+    /* verhindert Zeilenumbruch */
+    white-space: nowrap;
+
+    /* verhindert Überlaufen */
+    overflow: hidden;
+
+    /* schneidet lange Namen sauber ab */
+    text-overflow: ellipsis;
+
+    max-width: 100%;
+}
+
+/* Bild + Abilities rechts */
+.unit-main {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	position: relative;
+    margin-bottom: 10px;
+}
+
+.unit-content {
+	width: 100%;
+}
+
+.unit-image {
+	width: 80px;
+	height: 80px;
+	border-radius: 4px;
+}
+
+.unit-abilities-vertical {
+	display: flex;
+	flex-direction: column;
+	margin-left: 6px;
+	position: absolute;
+	right: -5px;
+}
+
+.ability-icon {
+	width: 22px;
+	height: 22px;
+	margin-bottom: 4px;
+}
+
+.rohstoff-icon {
+	width: 20px;
+	height: 20px;
+}
+
+/* Werte unter dem Bild */
+.unit-values {
+	margin-top: 10px;
+	color: #ddd;
+	font-size: 0.85rem;
+	line-height: 1.2rem;
+	text-align: left;
+}
+
+.unit-values h4 {
+	color: #f1d98f;
+	margin: 4px 0;
+}
+
+/* Kosten auf Rückseite */
+.unit-cost-row {
+	display: flex;
+	justify-content: space-between;
+	padding: 2px 50px 2px 10px;
+	color: #ddd;
+}
+.unit-buttons {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: center;
+}
+
+.unit-btn {
+    width: 90%;
+    font-size: 0.8rem;
+}
+
+.btn-danger {
+    background: #802020 !important;
+    border-color: #aa3030 !important;
+}
